@@ -12,7 +12,9 @@ In Version 1, I used python's dictionary to hold all of the data. This created a
 
 In Version 2, I used SQLite as the backing store. I created a sqlite databse with 2 columns, name and balance. This allows us to organize the data in a long term storage space, that can do lookups relatively quickly on large data sets, but it is slower on smaller data sets. 
 
-I also included a suite of tests using pytest. I setup a testing client to test various functionality pieces of the HTTP API. I make every API call defined, and hit all error cases.
+The main code is under `bank_account.py` with some utility functions in `utils.py`. The SQLite Database code is `sqlite_db.py`. `invalid_usage.py` contains the code for handling exceptions and validation failures.
+
+I also included a suite of tests using pytest, all located under the directory `tests/`. I setup a testing client to test various functionality pieces of the HTTP API. I make every API call defined, and hit all error cases.
 
 ## How to Build and Run
 I've included a Pipfile to allow easy installation of all dependencies. If using pipenv, dependencies can be installed by running `pipenv install`. This was written using Python 3, specifically 3.8. The dependencies required are flask, and pytest. 
